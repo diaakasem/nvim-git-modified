@@ -21,9 +21,11 @@ An example of how to load this plugin in Lazy:
         require("git-modified").setup()
     end,
     keys = {
-        "<leader>gm",
-        function() require("git-modified").main() end,
-        desc = "Git Modified"
+        {
+            "<leader>gm",
+            function() require("git-modified").main() end,
+            desc = "Git Modified"
+        }
     }
 }
 ```
