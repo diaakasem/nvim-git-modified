@@ -1,4 +1,8 @@
-# Git Modified
+# Git Modified [WIP]
+
+> NOTE: This is a personal project, it is not guranteed to work for everyone.
+>
+> Use at your own risk.
 
 This is a simple Neovim plugin to list / pick the modified files in the current branch in comparison to the main branch, using telescope for editing.
 
@@ -22,7 +26,7 @@ An example of how to load this plugin in Lazy:
     end,
     keys = {
         {
-            "<leader>gm",
+            "<leader>fm",
             function() require("git-modified").main() end,
             desc = "Git Modified"
         }

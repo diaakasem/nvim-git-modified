@@ -24,6 +24,10 @@ local function get_main_branch()
     -- in lua ( neovim ) - splitting string by / and getting the second element
     local main_branch_name = local_main_branch:match("([^/]+)$")
     -- print("main_branch_name: " .. main_branch_name)
+    -- FIXME: A hackly way to get this to work, as the git symbolic-ref command is not working as expected ( for mer )
+    if (main_branch_name ~= 'master' and main_branch_name ~= 'main') then
+        main_branch_name = 'master'
+    end
     return main_branch_name
 end
 
